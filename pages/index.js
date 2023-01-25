@@ -5,14 +5,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Pharmacy Home</title>
+        <title>PharmacyShop</title>
       </Head>
-
-      <main>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
-      </main>
+      Home page Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, eos dolore quod consequatur doloremque maxime hic odio accusamus, iure accusantium, praesentium neque reiciendis corporis totam beatae esse ipsam ipsum. Eaque.Home page Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, eos dolore quod consequatur doloremque maxime hic odio accusamus, iure accusantium, praesentium neque reiciendis corporis totam beatae esse ipsam ipsum. Eaque.Home page Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, eos dolore quod consequatur doloremque maxime hic odio accusamus, iure accusantium, praesentium neque reiciendis corporis totam beatae esse ipsam ipsum. Eaque.
     </div>
   );
 }
