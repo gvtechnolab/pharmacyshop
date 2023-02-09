@@ -1,0 +1,4 @@
+.forCarouselArrowBtns .slick-prev:before,
+.forCarouselArrowBtns .slick-next:before {
+  color: #198754;
+}

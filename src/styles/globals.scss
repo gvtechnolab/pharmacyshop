@@ -37,3 +37,21 @@ button {
   padding: 0.5rem 1rem;
   font-weight: bold;
 }
+
+// Scrollbar
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba($color: #000000, $alpha: 0.2);
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #198754;
+}
