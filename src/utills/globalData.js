@@ -45,7 +45,7 @@ export const HomeCarouselData = [
         id: 1,
         name: "Title one",
         desc: 'hi111',
-        image: "https://images.pexels.com/photos/12585760/pexels-photo-12585760.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "https://images.pexels.com/photos/2383010/pexels-photo-2383010.jpeg?auto=compress&cs=tinysrgb&w=400"
     },
     {
         id: 2,
@@ -75,6 +75,42 @@ export const HomeCarouselData = [
         id: 6,
         name: "Title 6",
         desc: 'hi333',
-        image: "https://images.pexels.com/photos/2383010/pexels-photo-2383010.jpeg?auto=compress&cs=tinysrgb&w=400"
+        image: "https://images.pexels.com/photos/12585760/pexels-photo-12585760.jpeg?auto=compress&cs=tinysrgb&w=400"
     }
 ];
+
+export const CategoryCarouselData = [
+    {
+        name:'Personal Hygiene',
+        img:'/assets/images/personalhygiene.png'
+    },
+    {
+        name:'Cold & Flu',
+        img:'/assets/images/coldandflu.png'
+    },
+    {
+        name:'Oral Care',
+        img:'/assets/images/oralcare.png'
+    },
+    ,
+    {
+        name:'Sun Care',
+        img:'/assets/images/suncare.png'
+    },
+    {
+        name:'First Aid',
+        img:'/assets/images/firstaid.png'
+    },
+    {
+        name:'Health Tips',
+        img:'/assets/images/healthtips.png'
+    },
+    {
+        name:'Healthy Eating',
+        img:'/assets/images/healthyeating.png'
+    },
+    {
+        name:'Ortho',
+        img:'/assets/images/ortho.png'
+    }
+]

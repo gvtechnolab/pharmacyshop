@@ -2,30 +2,30 @@ import React from 'react'
 import Slider from "react-slick";
 import CarouselItem from './HomeCarouselItem'
 import { HomeCarouselData } from '../../utills/globalData'
-import styles from '../HomeCarousel/HomeCarousel.module.css'
+import styles from './HomeCarousel.module.css'
 
-function SamplePrevArrow(props) {
+function PrevArrow(props) {
     const { className, style, onClick } = props;
     return (
         <div
-            className={`${className}`}
-            style={{ ...style, left: '-41px' }}
+            className={`${className} ${styles.HomeCarouselArrows}`}
+            style={{
+                ...style, display: "block"
+            }}
             onClick={onClick}
-        >
-            {'<'}
-        </div>
+        />
     );
 }
-function SampleNextArrow(props) {
+function NextArrow(props) {
     const { className, style, onClick } = props;
     return (
         <div
-            className={`${className}`}
-            style={{ ...style }}
+            className={`${className} ${styles.HomeCarouselArrows}`}
+            style={{
+                ...style, display: "block"
+            }}
             onClick={onClick}
-        >
-            {'>'}
-        </div>
+        />
     );
 }
 const HomeCarousel = () => {
@@ -35,8 +35,19 @@ const HomeCarousel = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         speed: 500,
-        // prevArrow: <SamplePrevArrow />,
-        // nextArrow: <SampleNextArrow />,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        prevArrow: <PrevArrow />,
+        nextArrow: <NextArrow />,
+        dots: true,
+        appendDots: dots => (
+            <div style={{
+                position:'absolute',
+                bottom:'10px',
+            }}>
+                <ul style={{ margin: "45px" }}> {dots} </ul>
+            </div>
+        ),
         responsive: [
             {
                 breakpoint: 1424,
