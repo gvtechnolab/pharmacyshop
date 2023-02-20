@@ -179,9 +179,7 @@ export default function Footer() {
           </Grid>
           <Grid item xs={12} sm={6} md={2.4}>
             <Menus>
-              <span sx={{
-                textTransform: 'uppercase'
-              }}>Social</span>
+              Social
               <List
                 sx={{
                   width: '100%',

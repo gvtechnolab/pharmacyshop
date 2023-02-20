@@ -73,7 +73,7 @@ const CategoryCarousel = () => {
     return (
         <Container sx={{
             padding: '8px',
-            marginY: '8px',
+            marginY: '14px',
         }}>
             <Slider {...settings}>
                 {CategoryCarouselData?.map((item, i) => (
