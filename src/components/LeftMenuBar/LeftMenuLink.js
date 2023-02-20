@@ -20,7 +20,7 @@ const LeftMenuLink = ({ icon, name, url }) => {
             <LinkElement href={url}>
                 <ListItem disablePadding>
                     <ListItemButton>
-                        <ListItemIcon>{icon}</ListItemIcon>
+                        <ListItemIcon sx={{color:'#198754'}}>{icon}</ListItemIcon>
                         <ListItemText primary={name} />
                     </ListItemButton>
                 </ListItem>

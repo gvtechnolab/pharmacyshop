@@ -1,4 +1,7 @@
-.forCarouselArrowBtns .slick-prev:before,
-.forCarouselArrowBtns .slick-next:before {
-  color: #198754;
+.HomeCarouselArrows::before {
+  color: rgba(25,135,84,0.2);
+  display: none;
+}
+.forCarouselArrowBtns:hover .HomeCarouselArrows::before {
+  display: block;
 }

@@ -27,7 +27,7 @@ const CarouselItem = ({ item }) => {
                 position: 'absolute',
                 bottom: '20%',
                 left: '10%',
-                color: 'white',
+                color: '#fff',
             }}>
                 <h2>{item.name}</h2>
                 <p>{item?.desc}</p>

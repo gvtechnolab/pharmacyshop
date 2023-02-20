@@ -179,9 +179,7 @@ export default function Footer() {
           </Grid>
           <Grid item xs={12} sm={6} md={2.4}>
             <Menus>
-              <span sx={{
-                textTransform: 'uppercase'
-              }}>Social</span>
+              Social
               <List
                 sx={{
                   width: '100%',
@@ -195,10 +193,10 @@ export default function Footer() {
                 }}
                 subheader={<li />}
               >
-                <FooterLink href="#">Facebook</FooterLink>
-                <FooterLink href="#">Instagram</FooterLink>
-                <FooterLink href="#">Twitter</FooterLink>
-                <FooterLink href="#">LinkedIn</FooterLink>
+                <FooterLink href="https://facebook.com/gvpharmacyshop/" target="_blank">Facebook</FooterLink>
+                <FooterLink href="https://instagram.com/gvpharmacyshop/" target="_blank">Instagram</FooterLink>
+                <FooterLink href="https://twitter.com/gvpharmacyshop/" target="_blank">Twitter</FooterLink>
+                <FooterLink href="https://linkedin.com/gvpharmacyshop/" target="_blank">LinkedIn</FooterLink>
               </List>
             </Menus>
           </Grid>
