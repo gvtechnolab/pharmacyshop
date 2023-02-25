@@ -10,7 +10,12 @@ export default function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <title>Create Next App</title>
-        <link rel="icon" href="/assets/images/pharmacyshoplogo48.png" />
+        <link rel="icon" href="/assets/images/pharmacyshoplogo96.png" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet" />
+        
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Layout>

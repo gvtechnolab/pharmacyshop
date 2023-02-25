@@ -32,4 +32,3 @@ const CategoryCarouselItem = ({ item }) => {
 }
 
 export default CategoryCarouselItem
-

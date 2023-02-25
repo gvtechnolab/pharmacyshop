@@ -6,7 +6,7 @@ const PageHead = ({ name }) => {
         <Head>
             <title>{name} - PharmacyShop</title>
             <meta name="description" content="Wearart! powered by gvtechnolab" />
-            <link rel="icon" href="/assets/images/pharmacyshoplogo48.png" />
+            <link rel="icon" href="/assets/images/pharmacyshoplogo96.png" />
         </Head>
     )
 }

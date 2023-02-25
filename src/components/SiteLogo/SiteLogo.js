@@ -1,17 +1,18 @@
 import React from 'react'
 import { Box } from '@mui/material';
 
-const SiteLogo = ({ name, light }) => {
+const SiteLogo = ({ name, light = false, inlineBlocked }) => {
     return (
         <Box sx={{
-            color: light === undefined ? '#198754' : 'white',
+            color: light === false ? '#198754' : 'white',
             // display: 'flex',
             // justifyContent: 'center',
             fontWeight: 'bold',
             textAlign: 'center',
             margin: '8px 0',
             cursor: "default",
-            fontSize: '18px'
+            fontSize: '18px',
+            display: inlineBlocked ? 'inline-block' : 'block'
         }}>
             <Box
                 component="img"
@@ -22,7 +23,7 @@ const SiteLogo = ({ name, light }) => {
                     maxWidth: { xs: 350, md: 250 },
                 }}
                 alt="PharmacyShop"
-                src="/assets/images/pharmacyshoplogo48.png" />
+                src={light === false ? "/assets/images/pharmacyshoplogo96.png" : "/assets/images/pharmacyshoplogo96white.png"} />
             <span>{name}</span>
         </Box>
     )
