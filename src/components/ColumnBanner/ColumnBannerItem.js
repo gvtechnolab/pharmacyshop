@@ -6,9 +6,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
-import IconButton from '@mui/material/IconButton';
 import { styled } from '@mui/material/styles';
-import PlayArrowIcon from '@mui/icons-material/PlayArrow';
 import Button from '@mui/material/Button';
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -22,7 +20,7 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const ColumnBannerItem = ({ item }) => {
     return (
-        <Grid xs={6}>
+        <Grid xs={12} sm={6}>
             <Item sx={{ boxShadow: 'none', padding: '8px 0' }}>
                 <Card sx={{ display: 'flex', justifyContent: 'space-between' }}>
                     <Box sx={{ display: 'flex', flexDirection: 'column' }}>
@@ -35,15 +33,9 @@ const ColumnBannerItem = ({ item }) => {
                             </Typography>
                         </CardContent>
                         <Box sx={{ display: 'flex', alignItems: 'center', pl: 1, pb: 1 }}>
-                            {/* <IconButton aria-label="previous">
-                                {theme.direction === 'rtl' ? <SkipNextIcon /> : <SkipPreviousIcon />}
-                            </IconButton> */}
                             <Button variant='text' color='success'>
                                 {item?.btnText}
                             </Button>
-                            {/* <IconButton aria-label="next">
-                                {theme.direction === 'rtl' ? <SkipPreviousIcon /> : <SkipNextIcon />}
-                            </IconButton> */}
                         </Box>
                     </Box>
                     <CardMedia

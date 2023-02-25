@@ -34,7 +34,7 @@ export default function ProductCarousel() {
     const settings = {
         initialSlide: 0,
         infinite: true,
-        slidesToShow: 4,
+        slidesToShow: 5,
         slidesToScroll: 1,
         speed: 500,
         prevArrow: <PrevArrow />,
@@ -50,21 +50,21 @@ export default function ProductCarousel() {
             {
                 breakpoint: 768,
                 settings: {
-                    slidesToShow: 4,
+                    slidesToShow: 3,
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 2,
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 2,
+                    slidesToShow: 1,
                     slidesToScroll: 1
                 }
             }
@@ -75,7 +75,7 @@ export default function ProductCarousel() {
             padding: '8px',
             marginY: '14px',
         }}>
-            <Slider {...settings}>
+            <Slider {...settings} className='ProductCarouselSlider'>
                 {Products?.map((item, i) => (
                     <ProductCarouselItem key={i} item={item} />
                 ))}

@@ -11,7 +11,7 @@ export default function ColumnBanner() {
             padding: '8px',
             marginY: '14px',
         }}>
-            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }} flexWrap='wrap'>
+            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
                 {ColumnBannerData?.map((item, i) => (
                     <ColumnBannerItem key={i} item={item} />
                 ))}

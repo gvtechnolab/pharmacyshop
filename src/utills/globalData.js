@@ -10,30 +10,24 @@ export const LeftBarMenus = [
     },
     {
         id: 2,
-        name: 'Ayush',
-        url: '/ayush',
-        icon: <AdminPanelSettings />
-    },
-    {
-        id: 3,
         name: 'Medicines',
         url: '/medicines',
         icon: <MedicalInformation />
     },
     {
-        id: 9,
+        id: 3,
         name: 'Healthcare',
         url: '/healthcare',
         icon: <Medication />
     },
     {
-        id: 5,
+        id: 4,
         name: 'Contact',
         url: '/contact',
         icon: <ContactPage />
     },
     {
-        id: 6,
+        id: 5,
         name: 'About',
         url: '/about',
         icon: <Info />
@@ -43,40 +37,34 @@ export const LeftBarMenus = [
 export const HomeCarouselData = [
     {
         id: 1,
-        name: "Title one",
-        desc: 'hi111',
-        image: "https://images.pexels.com/photos/2383010/pexels-photo-2383010.jpeg?auto=compress&cs=tinysrgb&w=400"
+        name: "Health Care",
+        desc: 'We care like a mother.',
+        image: "/assets/images/img1healthcare.jpg"
     },
     {
         id: 2,
-        name: "Title two",
-        desc: 'hi232',
-        image: "https://images.pexels.com/photos/7615563/pexels-photo-7615563.jpeg?auto=compress&cs=tinysrgb&w=400"
+        name: "Most Trusted Medicines",
+        desc: 'Preferred by our best doctors.',
+        image: "/assets/images/img2medicinesandpharmacist.jpg"
     },
     {
         id: 3,
-        name: "Title three",
-        desc: 'hi333',
-        image: "https://images.pexels.com/photos/2383010/pexels-photo-2383010.jpeg?auto=compress&cs=tinysrgb&w=400"
+        name: "Fitness Trackers",
+        desc: 'Your fitness is in your hands.',
+        image: "/assets/images/img3fitnesstracker.jpg"
     },
     {
         id: 4,
-        name: "Title 4",
-        desc: 'hi111',
-        image: "https://images.pexels.com/photos/12585760/pexels-photo-12585760.jpeg?auto=compress&cs=tinysrgb&w=400"
+        name: "Health Products",
+        desc: 'Machines that cares your health.',
+        image: "/assets/images/img4healthequipment.jpg"
     },
     {
         id: 5,
-        name: "Title 5",
-        desc: 'hi222',
-        image: "https://images.pexels.com/photos/7615563/pexels-photo-7615563.jpeg?auto=compress&cs=tinysrgb&w=400"
+        name: "Thanks Giving",
+        desc: 'Thankfulness is the quickest path to joy.',
+        image: "/assets/images/img5thanksgiving.jpg"
     },
-    {
-        id: 6,
-        name: "Title 6",
-        desc: 'hi333',
-        image: "https://images.pexels.com/photos/12585760/pexels-photo-12585760.jpeg?auto=compress&cs=tinysrgb&w=400"
-    }
 ];
 
 export const CategoryCarouselData = [
@@ -133,7 +121,7 @@ export const ColumnBannerData = [
 export const Products = [
     {
         id: '1',
-        name: 'dental_care_kit_hc',
+        name: 'dental_care_kit_for_adult_simish_hc',
         img: '/assets/images/dental_care_kit_hc.jpg',
         category: 'healthcare',
         price: '350',
@@ -173,7 +161,7 @@ export const Products = [
     },
     {
         id: '5',
-        name: 'moisolo_hair_serum_hc',
+        name: 'moisolo_hair_serum_antiedad_hc',
         img: '/assets/images/moisolo_hair_serum_hc.jpg',
         category: 'healthcare',
         price: '175',
@@ -183,8 +171,8 @@ export const Products = [
     },
     {
         id: '6',
-        name: 'groundedgodess_stethoscope_black_and_white_hc',
-        img: '/assets/images/groundedgodess_stethoscope_black_and_white_hc.jpg',
+        name: 'groundedgodess_stethoscope_black_white_hc',
+        img: '/assets/images/groundedgodess_stethoscope_black_white_hc.jpg',
         category: 'healthcare',
         price: '1300',
         originalPrice: '1700',
@@ -263,7 +251,7 @@ export const Products = [
     },
     {
         id: '14',
-        name: 'gear_fitbit_charge_hc',
+        name: 'gear_fitbit_charge_4_fitness_activity_tracker_hc',
         img: '/assets/images/gear_fitbit_charge_hc.jpg',
         category: 'healthcare',
         price: '3499',
@@ -273,7 +261,7 @@ export const Products = [
     },
     {
         id: '15',
-        name: 'vvm_digital_thermmeter_hc',
+        name: 'vvm_flexible_digital_thermometer_DT/2H_hc',
         img: '/assets/images/vvm_digital_thermometer_hc.jpg',
         category: 'healthcare',
         price: '199',
@@ -283,7 +271,7 @@ export const Products = [
     },
     {
         id: '16',
-        name: 'vandelay_thermometer_hc',
+        name: 'vandelay_infrared_digital_thermometer_hc',
         img: '/assets/images/vandelay_thermometer_hc.jpg',
         category: 'healthcare',
         price: '450',
@@ -293,7 +281,7 @@ export const Products = [
     },
     {
         id: '17',
-        name: 'finger_pulse_oximeter_hc',
+        name: 'fingertip_pulse_oximeter_NL_50_OLED_hc',
         img: '/assets/images/finger_pulse_oximeter_hc.jpg',
         category: 'healthcare',
         price: '1200',
@@ -313,7 +301,7 @@ export const Products = [
     },
     {
         id: '19',
-        name: 'aneroid_sphygmomanometer_hc',
+        name: 'aneroid_sphygmomanometer_110_hc',
         img: '/assets/images/aneroid_sphygmomanometer_hc.jpg',
         category: 'healthcare',
         price: '2999',
@@ -323,7 +311,7 @@ export const Products = [
     },
     {
         id: '20',
-        name: 'paracetamol_med_500mg_m',
+        name: 'paracetamol_med_tablet_10s_500mg_strip_m',
         img: '/assets/images/paracetamol_med_500mg_strip_m.jpg',
         category: 'medicines',
         price: '89',
@@ -343,7 +331,7 @@ export const Products = [
     },
     {
         id: '22',
-        name: 'oxycodone_rab_mick_m',
+        name: 'oxycodone_rab_mck_hydrochloride_m',
         img: '/assets/images/oxycodone_rab_mick_m.jpg',
         category: 'medicines',
         price: '7999',
@@ -381,4 +369,22 @@ export const Products = [
         ratings: '',
         reviews: '',
     },
+];
+
+export const ProductFilterOptions = [
+    {
+        id: 1,
+        title: 'Categories',
+        options: ['medicine', 'syrup', 'device'],
+    },
+    {
+        id: 2,
+        title: 'Brands',
+        options: ['brand1', 'brand2', 'brand3'],
+    },
+    {
+        id: 3,
+        title: 'Price',
+        options: ['aama','slider', 'avse']
+    }
 ];

@@ -1,4 +1,4 @@
-@import './_variables.scss';
+@import "./_variables.scss";
 html,
 body {
   padding: 0;
@@ -54,4 +54,12 @@ button {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #198754;
+}
+/* Handle Product Carousel Slider */
+.ProductCarouselSlider .slick-list {
+  padding: 14px 0;
+}
+/**/
+.ProductListingFilterItem::before{
+  display: none;
 }

@@ -25,8 +25,8 @@ const CarouselItem = ({ item }) => {
             />
             <Container sx={{
                 position: 'absolute',
-                bottom: '20%',
-                left: '10%',
+                bottom: '15%',
+                left: '5%',
                 color: '#fff',
             }}>
                 <h2>{item.name}</h2>

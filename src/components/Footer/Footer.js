@@ -16,6 +16,7 @@ import {
   // Link
 } from '@mui/material';
 import FooterLink from './FooterLink';
+import SiteLogo from '../SiteLogo/SiteLogo.js'
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: 'transparent',
@@ -57,12 +58,11 @@ export default function Footer() {
     >
       <Container>
         <Grid container spacing={2} justifyContent='space-between' sx={{
-          marginY:'15px'
+          marginY: '15px'
         }}>
           <Grid item >
             {/* <Item> */}
-            <div>
-              <Box
+            {/* <Box
                 component="img"
                 sx={{
                   height: 35,
@@ -71,12 +71,12 @@ export default function Footer() {
                   maxWidth: { xs: 350, md: 250 },
                 }}
                 alt="PharmacyShop"
-                src="/assets/images/pharmacyshoplogo48.png"
-              />PharmacyShop
-            </div>
+                src="/assets/images/pharmacyshoplogo96.png"
+              />PharmacyShop */}
+            <SiteLogo name="PharmacyShop" />
             {/* </Item> */}
           </Grid>
-          <Grid item >
+          <Grid item sx={{ fontFamily: 'Dancing Script', fontSize:'18px' }}>
             <span>We does not just sell medicines but trust too.</span>
           </Grid>
         </Grid>
@@ -86,7 +86,7 @@ export default function Footer() {
           // display: 'flex',
           // flexWrap: 'wrap',
           // justifyContent: 'space-evenly',
-          marginY:'15px'
+          marginY: '15px'
         }}>
           <Grid item xs={12} sm={6} md={2.4}>
             <Menus>
@@ -152,7 +152,6 @@ export default function Footer() {
               >
                 <FooterLink href="/medicines">Medicines</FooterLink>
                 <FooterLink href="/healthcare">Healthcare Devices</FooterLink>
-                <FooterLink href="/ayush">Ayush</FooterLink>
               </List>
             </Menus>
           </Grid>
@@ -203,7 +202,7 @@ export default function Footer() {
         </Grid>
         <Divider />
         <Grid container spacing={2} justifyContent='space-between' sx={{
-          marginY:'15px'
+          marginY: '15px'
         }}>
           <Grid item>
             {/* <Item> */}
