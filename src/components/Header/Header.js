@@ -98,6 +98,8 @@ export default function Header({ setIsLeftMenuOpen }) {
       onClose={handleMenuClose}
     >
       <MenuItem onClick={handleMenuClose}>Profile</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Wishlist</MenuItem>
+      <MenuItem onClick={handleMenuClose}>Orders</MenuItem>
       <MenuItem onClick={handleMenuClose}>Logout</MenuItem>
     </Menu>
   );
@@ -129,7 +131,7 @@ export default function Header({ setIsLeftMenuOpen }) {
             <ShoppingCart />
           </Badge>
         </IconButton>
-        <p>Item 1</p>
+        <p>Cart</p>
       </MenuItem>
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
@@ -141,7 +143,7 @@ export default function Header({ setIsLeftMenuOpen }) {
         >
           <AccountCircle />
         </IconButton>
-        <p>Item 2</p>
+        <p>More</p>
       </MenuItem>
     </Menu>
   );

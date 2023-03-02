@@ -151,7 +151,7 @@ export default function Footer() {
                 subheader={<li />}
               >
                 <FooterLink href="/medicines">Medicines</FooterLink>
-                <FooterLink href="/healthcare">Healthcare Devices</FooterLink>
+                <FooterLink href="/healthcare">Healthcare</FooterLink>
               </List>
             </Menus>
           </Grid>
