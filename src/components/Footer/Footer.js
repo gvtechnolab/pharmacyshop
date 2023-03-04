@@ -15,8 +15,8 @@ import {
   Container
   // Link
 } from '@mui/material';
-import FooterLink from './FooterLink';
 import SiteLogo from '../SiteLogo/SiteLogo.js'
+import PsLink from '../PsLink/PsLink';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: 'transparent',
@@ -104,11 +104,11 @@ export default function Footer() {
                 }}
                 subheader={<li />}
               >
-                <FooterLink href="/">PharmacyShop</FooterLink>
-                <FooterLink href="/login">My Account</FooterLink>
-                <FooterLink href="/faq">Terms & Conditions</FooterLink>
-                <FooterLink href="/faq">Privacy Policy</FooterLink>
-                <FooterLink href="/faq">FAQs</FooterLink>
+                <PsLink href="/">PharmacyShop</PsLink>
+                <PsLink href="/login">My Account</PsLink>
+                <PsLink href="/faq">Terms & Conditions</PsLink>
+                <PsLink href="/faq">Privacy Policy</PsLink>
+                <PsLink href="/faq">FAQs</PsLink>
               </List>
             </Menus>
           </Grid>
@@ -128,9 +128,9 @@ export default function Footer() {
                 }}
                 subheader={<li />}
               >
-                <FooterLink href="#">Appointments</FooterLink>
-                <FooterLink href="#">Clinics</FooterLink>
-                <FooterLink href="#">Specialists</FooterLink>
+                <PsLink href="#">Appointments</PsLink>
+                <PsLink href="#">Clinics</PsLink>
+                <PsLink href="#">Specialists</PsLink>
               </List>
             </Menus>
           </Grid>
@@ -150,8 +150,8 @@ export default function Footer() {
                 }}
                 subheader={<li />}
               >
-                <FooterLink href="/medicines">Medicines</FooterLink>
-                <FooterLink href="/healthcare">Healthcare</FooterLink>
+                <PsLink href="/medicines">Medicines</PsLink>
+                <PsLink href="/healthcare">Healthcare</PsLink>
               </List>
             </Menus>
           </Grid>
@@ -171,8 +171,8 @@ export default function Footer() {
                 }}
                 subheader={<li />}
               >
-                <FooterLink href="/about">About</FooterLink>
-                <FooterLink href="/contact">Contact</FooterLink>
+                <PsLink href="/about">About</PsLink>
+                <PsLink href="/contact">Contact</PsLink>
               </List>
             </Menus>
           </Grid>
@@ -192,10 +192,10 @@ export default function Footer() {
                 }}
                 subheader={<li />}
               >
-                <FooterLink href="https://facebook.com/gvpharmacyshop/" target="_blank">Facebook</FooterLink>
-                <FooterLink href="https://instagram.com/gvpharmacyshop/" target="_blank">Instagram</FooterLink>
-                <FooterLink href="https://twitter.com/gvpharmacyshop/" target="_blank">Twitter</FooterLink>
-                <FooterLink href="https://linkedin.com/gvpharmacyshop/" target="_blank">LinkedIn</FooterLink>
+                <PsLink href="https://facebook.com/gvpharmacyshop/" target="_blank">Facebook</PsLink>
+                <PsLink href="https://instagram.com/gvpharmacyshop/" target="_blank">Instagram</PsLink>
+                <PsLink href="https://twitter.com/gvpharmacyshop/" target="_blank">Twitter</PsLink>
+                <PsLink href="https://linkedin.com/gvpharmacyshop/" target="_blank">LinkedIn</PsLink>
               </List>
             </Menus>
           </Grid>
