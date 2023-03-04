@@ -16,7 +16,6 @@ import ShoppingCart from "@mui/icons-material/ShoppingCart";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import SiteLogo from "../SiteLogo/SiteLogo.js";
-import Link from "next/link";
 import PsLink from "../PsLink/PsLink.js";
 
 const Search = styled("div")(({ theme }) => ({

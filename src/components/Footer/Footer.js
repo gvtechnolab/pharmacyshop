@@ -17,6 +17,7 @@ import {
 } from '@mui/material';
 import SiteLogo from '../SiteLogo/SiteLogo.js'
 import PsLink from '../PsLink/PsLink';
+import { assetsPrefix } from '../../utills/constants.js';
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: 'transparent',
@@ -220,7 +221,7 @@ export default function Footer() {
                 maxWidth: { xs: 350, md: 250 },
               }}
               alt="visa"
-              src="/assets/svgs/visa.svg"
+              src={`${assetsPrefix}/assets/svgs/visa.svg`}
             />
             <Box
               component="img"
@@ -232,7 +233,7 @@ export default function Footer() {
                 maxWidth: { xs: 350, md: 250 },
               }}
               alt="mastercard"
-              src="/assets/svgs/mastercard.svg"
+              src={`${assetsPrefix}/assets/svgs/mastercard.svg`}
             />
             <Box
               component="img"
@@ -244,7 +245,7 @@ export default function Footer() {
                 maxWidth: { xs: 350, md: 250 },
               }}
               alt="paypal"
-              src="/assets/svgs/paypal.svg"
+              src={`${assetsPrefix}/assets/svgs/paypal.svg`}
             />
           </Grid>
         </Grid>
