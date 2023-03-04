@@ -38,7 +38,7 @@ const ProductCarouselItem = ({ item }) => {
         height: "320px",
         padding: "10px",
         borderRadius: "8px",
-        boxShadow: "none",
+        boxShadow: "1px 0 0 1px rgb(255 255 255), 0.1em 0.1em 0.5em rgb(0 0 0 / 20%)",
         // border:'1px solid rgba(25, 135, 84, 0.2)',
         position: "relative",
       }}
