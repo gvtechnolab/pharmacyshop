@@ -38,10 +38,7 @@ const wishlist = () => {
                 ? wishlistData?.map((item, key) => (
                     <>
                       <Grid item xs={3} key={key}>
-                        <UserProductItem
-                          item={item}
-                          productIn="wishlist"
-                        />
+                        <div>{item?.id}</div>
                       </Grid>
                     </>
                   ))

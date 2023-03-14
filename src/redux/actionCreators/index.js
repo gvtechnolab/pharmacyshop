@@ -37,6 +37,7 @@ export const addtocart = (item) => {
 };
 
 export const removefromcart = (item) => {
+  console.log("action index", item);
   return {
     type: REMOVEFROMCART,
     payload: item,

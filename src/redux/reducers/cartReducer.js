@@ -27,7 +27,8 @@ const reducer = (state = initialState, action) => {
         ];
       }
     case REMOVEFROMCART:
-      const one = state?.filter((item) => item !== action?.payload);
+      console.log("cart redu-", action.payload);
+      const one = state?.filter((item) => item?.id !== action?.payload?.id);
       return one;
     default:
       return state;
