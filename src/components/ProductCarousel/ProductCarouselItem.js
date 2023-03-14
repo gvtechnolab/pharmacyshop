@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
 import Typography from "@mui/material/Typography";
 import styles from "./ProductCarousel.module.css";
 import IconButton from "@mui/material/IconButton";
@@ -14,13 +15,14 @@ import { actionCreators } from "../../redux";
 
 const ProductCarouselItem = ({ item }) => {
   const wishlist = useSelector((state) => state.wishlist);
+  const cartList = useSelector((state) => state.cart);
+
   const dispatch = useDispatch();
-  const { addtowishlist, removefromwishlist } = bindActionCreators(
-    actionCreators,
-    dispatch
-  );
+  const { addtowishlist, removefromwishlist, addtocart, removefromcart } =
+    bindActionCreators(actionCreators, dispatch);
 
   const [addWish, SetAddWish] = useState(wishlist.includes(item?.id));
+
   const addToWishlistFunction = (prodId) => {
     if (!addWish) {
       SetAddWish(true);
@@ -30,6 +32,7 @@ const ProductCarouselItem = ({ item }) => {
       removefromwishlist(prodId);
     }
   };
+
   return (
     <Card
       sx={{
@@ -38,7 +41,8 @@ const ProductCarouselItem = ({ item }) => {
         height: "320px",
         padding: "10px",
         borderRadius: "8px",
-        boxShadow: "1px 0 0 1px rgb(255 255 255), 0.1em 0.1em 0.5em rgb(0 0 0 / 20%)",
+        boxShadow:
+          "1px 0 0 1px rgb(255 255 255), 0.1em 0.1em 0.5em rgb(0 0 0 / 20%)",
         // border:'1px solid rgba(25, 135, 84, 0.2)',
         position: "relative",
       }}
@@ -74,7 +78,33 @@ const ProductCarouselItem = ({ item }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        <Button variant="outlined" size="small" color="success">
+        {/* <ButtonGroup size="small" aria-label="small button group">
+          <Button
+            variant="outlined"
+            size="small"
+            color="success"
+            // onClick={() => removefromcart(item?.id)}
+          >
+            -
+          </Button>
+          <Button variant="outlined" size="small" color="success">
+            {cart?.length}
+          </Button>
+          <Button
+            variant="outlined"
+            size="small"
+            color="success"
+            // onClick={() => addtocart(item?.id)}
+          >
+            +
+          </Button>
+        </ButtonGroup> */}
+        <Button
+          variant="outlined"
+          size="small"
+          color="success"
+          onClick={() => addtocart({ id: item?.id, qty: 1 })}
+        >
           Add to cart
         </Button>
       </CardActions>
