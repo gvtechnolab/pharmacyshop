@@ -10,14 +10,13 @@ import InputBase from "@mui/material/InputBase";
 import Badge from "@mui/material/Badge";
 import MenuItem from "@mui/material/MenuItem";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/menu";
+import MenuIcon from "@mui/icons-material/Menu";
 import SearchIcon from "@mui/icons-material/Search";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import ShoppingCart from "@mui/icons-material/ShoppingCart";
 import MoreIcon from "@mui/icons-material/MoreVert";
 import ExpandMore from "@mui/icons-material/ExpandMore";
 import SiteLogo from "../SiteLogo/SiteLogo.js";
-import Link from "next/link";
 import PsLink from "../PsLink/PsLink.js";
 
 const Search = styled("div")(({ theme }) => ({
@@ -221,7 +220,10 @@ export default function Header({ setIsLeftMenuOpen }) {
 
           {/* <Box sx={{ flexGrow: 1 }} /> */}
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <PsLink href="/cart" sx={{ color: "#fff", ":hover":{color:'#fff'} }}>
+            <PsLink
+              href="/cart"
+              sx={{ color: "#fff", ":hover": { color: "#fff" } }}
+            >
               <IconButton
                 size="large"
                 aria-label="show 13 new notifications"

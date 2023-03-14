@@ -6,6 +6,7 @@ import {
   Medication,
   MedicalInformation,
 } from "@mui/icons-material";
+import { assetsPrefix } from "./constants";
 
 // LeftMenuBar Items
 export const LeftBarMenus = [
@@ -46,67 +47,67 @@ export const HomeCarouselData = [
     id: 1,
     name: "Health Care",
     desc: "We care like a mother.",
-    image: "/assets/images/img1healthcare.jpg",
+    image: `${assetsPrefix}/assets/images/img1healthcare.jpg`,
   },
   {
     id: 2,
     name: "Most Trusted Medicines",
     desc: "Preferred by our best doctors.",
-    image: "/assets/images/img2medicinesandpharmacist.jpg",
+    image: `${assetsPrefix}/assets/images/img2medicinesandpharmacist.jpg`,
   },
   {
     id: 3,
     name: "Fitness Trackers",
     desc: "Your fitness is in your hands.",
-    image: "/assets/images/img3fitnesstracker.jpg",
+    image: `${assetsPrefix}/assets/images/img3fitnesstracker.jpg`,
   },
   {
     id: 4,
     name: "Health Products",
     desc: "Machines that cares your health.",
-    image: "/assets/images/img4healthequipment.jpg",
+    image: `${assetsPrefix}/assets/images/img4healthequipment.jpg`,
   },
   {
     id: 5,
     name: "Thanks Giving",
     desc: "Thankfulness is the quickest path to joy.",
-    image: "/assets/images/img5thanksgiving.jpg",
+    image: `${assetsPrefix}/assets/images/img5thanksgiving.jpg`,
   },
 ];
 
 export const CategoryCarouselData = [
   {
     name: "Personal Hygiene",
-    img: "/assets/images/personalhygiene.png",
+    img: `${assetsPrefix}/assets/images/personalhygiene.png`,
   },
   {
     name: "Cold & Flu",
-    img: "/assets/images/coldandflu.png",
+    img: `${assetsPrefix}/assets/images/coldandflu.png`,
   },
   {
     name: "Oral Care",
-    img: "/assets/images/oralcare.png",
+    img: `${assetsPrefix}/assets/images/oralcare.png`,
   },
   ,
   {
     name: "Sun Care",
-    img: "/assets/images/suncare.png",
+    img: `${assetsPrefix}/assets/images/suncare.png`,
   },
   {
     name: "First Aid",
-    img: "/assets/images/firstaid.png",
+    img: `${assetsPrefix}/assets/images/firstaid.png`,
   },
   {
     name: "Health Tips",
-    img: "/assets/images/healthtips.png",
+    img: `${assetsPrefix}/assets/images/healthtips.png`,
   },
   {
     name: "Healthy Eating",
-    img: "/assets/images/healthyeating.png",
+    img: `${assetsPrefix}/assets/images/healthyeating.png`,
   },
   {
     name: "Ortho",
-    img: "/assets/images/ortho.png",
+    img: `${assetsPrefix}/assets/images/ortho.png`,
   },
 ];
 
@@ -114,13 +115,13 @@ export const ColumnBannerData = [
   {
     title: "Personal Hygiene",
     desc: `Basic personal need for all.`,
-    img: "/assets/images/personalhygienebannerimg.jpg",
+    img: `${assetsPrefix}/assets/images/personalhygienebannerimg.jpg`,
     btnText: "Shop Now",
   },
   {
     title: "Any Questions?",
     desc: "Meet our health expert.",
-    img: "/assets/images/anyquestion.jpg",
+    img: `${assetsPrefix}/assets/images/anyquestion.jpg`,
     btnText: "Book Now",
   },
 ];
@@ -129,7 +130,7 @@ export const Products = [
   {
     id: "1",
     name: "dental_care_kit_for_adult_simish_hc",
-    img: "/assets/images/dental_care_kit_hc.jpg",
+    img: `${assetsPrefix}/assets/images/dental_care_kit_hc.jpg`,
     category: "healthcare",
     price: "350",
     originalPrice: "500",
@@ -139,7 +140,7 @@ export const Products = [
   {
     id: "2",
     name: "bio_muscle_cream_250mg_hc",
-    img: "/assets/images/bio_muscle_cream_250mg_hc.jpg",
+    img: `${assetsPrefix}/assets/images/bio_muscle_cream_250mg_hc.jpg`,
     category: "healthcare",
     price: "450",
     originalPrice: "750",
@@ -149,7 +150,7 @@ export const Products = [
   {
     id: "3",
     name: "piyapong_injections_with_niddle_m",
-    img: "/assets/images/piyapong_injections_with_niddle_m.jpg",
+    img: `${assetsPrefix}/assets/images/piyapong_injections_with_niddle_m.jpg`,
     category: "medicines",
     price: "50",
     originalPrice: "75",
@@ -159,7 +160,7 @@ export const Products = [
   {
     id: "4",
     name: "piyapong_facial_disposible_mask_hc",
-    img: "/assets/images/piyapong_facial_disposible_mask_hc.jpg",
+    img: `${assetsPrefix}/assets/images/piyapong_facial_disposible_mask_hc.jpg`,
     category: "healthcare",
     price: "15",
     originalPrice: "20",
@@ -169,7 +170,7 @@ export const Products = [
   {
     id: "5",
     name: "moisolo_hair_serum_antiedad_hc",
-    img: "/assets/images/moisolo_hair_serum_hc.jpg",
+    img: `${assetsPrefix}/assets/images/moisolo_hair_serum_hc.jpg`,
     category: "healthcare",
     price: "175",
     originalPrice: "250",
@@ -179,7 +180,7 @@ export const Products = [
   {
     id: "6",
     name: "groundedgodess_stethoscope_black_white_hc",
-    img: "/assets/images/groundedgodess_stethoscope_black_white_hc.jpg",
+    img: `${assetsPrefix}/assets/images/groundedgodess_stethoscope_black_white_hc.jpg`,
     category: "healthcare",
     price: "1300",
     originalPrice: "1700",
@@ -189,7 +190,7 @@ export const Products = [
   {
     id: "7",
     name: "correxiko_collagen_vitamin_c_2kg_m",
-    img: "/assets/images/correxiko_collagen_vitamin_c_2kg_m.jpg",
+    img: `${assetsPrefix}/assets/images/correxiko_collagen_vitamin_c_2kg_m.jpg`,
     category: "medicines",
     price: "3500",
     originalPrice: "4700",
@@ -199,7 +200,7 @@ export const Products = [
   {
     id: "8",
     name: "correxiko_collagen_vitamin_c_1kg_m",
-    img: "/assets/images/correxiko_collagen_vitamin_c_1kg_m.jpg",
+    img: `${assetsPrefix}/assets/images/correxiko_collagen_vitamin_c_1kg_m.jpg`,
     category: "medicines",
     price: "2500",
     originalPrice: "2700",
@@ -209,7 +210,7 @@ export const Products = [
   {
     id: "9",
     name: "correxiko_collagen_unflavoured_2kg_m",
-    img: "/assets/images/correxiko_collagen_unflavoured_2kg_m.jpg",
+    img: `${assetsPrefix}/assets/images/correxiko_collagen_unflavoured_2kg_m.jpg`,
     category: "medicines",
     price: "3400",
     originalPrice: "4600",
@@ -219,7 +220,7 @@ export const Products = [
   {
     id: "10",
     name: "correxiko_collagen_unflavoured_1kg_m",
-    img: "/assets/images/correxiko_collagen_unflavoured_1kg_m.jpg",
+    img: `${assetsPrefix}/assets/images/correxiko_collagen_unflavoured_1kg_m.jpg`,
     category: "medicines",
     price: "2300",
     originalPrice: "2600",
@@ -229,7 +230,7 @@ export const Products = [
   {
     id: "11",
     name: "correxiko_collagen_unflavoured_500mg_m",
-    img: "/assets/images/correxiko_collagen_unflavoured_500mg_m.jpg",
+    img: `${assetsPrefix}/assets/images/correxiko_collagen_unflavoured_500mg_m.jpg`,
     category: "medicines",
     price: "899",
     originalPrice: "1199",
@@ -239,7 +240,7 @@ export const Products = [
   {
     id: "12",
     name: "charlotte_candillier_detox_facial_oil_50mg_m",
-    img: "/assets/images/charlotte_candillier_detox_facial_oil_50mg_m.jpg",
+    img: `${assetsPrefix}/assets/images/charlotte_candillier_detox_facial_oil_50mg_m.jpg`,
     category: "medicines",
     price: "300",
     originalPrice: "400",
@@ -249,7 +250,7 @@ export const Products = [
   {
     id: "13",
     name: "bakytzhan_baurzhanov_operational_instruments_m",
-    img: "/assets/images/bakytzhan_baurzhanov_operational_instruments_m.jpg",
+    img: `${assetsPrefix}/assets/images/bakytzhan_baurzhanov_operational_instruments_m.jpg`,
     category: "medicines",
     price: "6000",
     originalPrice: "7500",
@@ -259,7 +260,7 @@ export const Products = [
   {
     id: "14",
     name: "gear_fitbit_charge_4_fitness_activity_tracker_hc",
-    img: "/assets/images/gear_fitbit_charge_hc.jpg",
+    img: `${assetsPrefix}/assets/images/gear_fitbit_charge_hc.jpg`,
     category: "healthcare",
     price: "3499",
     originalPrice: "3999",
@@ -269,7 +270,7 @@ export const Products = [
   {
     id: "15",
     name: "vvm_flexible_digital_thermometer_DT/2H_hc",
-    img: "/assets/images/vvm_digital_thermometer_hc.jpg",
+    img: `${assetsPrefix}/assets/images/vvm_digital_thermometer_hc.jpg`,
     category: "healthcare",
     price: "199",
     originalPrice: "249",
@@ -279,7 +280,7 @@ export const Products = [
   {
     id: "16",
     name: "vandelay_infrared_digital_thermometer_hc",
-    img: "/assets/images/vandelay_thermometer_hc.jpg",
+    img: `${assetsPrefix}/assets/images/vandelay_thermometer_hc.jpg`,
     category: "healthcare",
     price: "450",
     originalPrice: "550",
@@ -289,7 +290,7 @@ export const Products = [
   {
     id: "17",
     name: "fingertip_pulse_oximeter_NL_50_OLED_hc",
-    img: "/assets/images/finger_pulse_oximeter_hc.jpg",
+    img: `${assetsPrefix}/assets/images/finger_pulse_oximeter_hc.jpg`,
     category: "healthcare",
     price: "1200",
     originalPrice: "1400",
@@ -299,7 +300,7 @@ export const Products = [
   {
     id: "18",
     name: "blood_pressure_monitor_upper_arms_hc",
-    img: "/assets/images/blood_pressure_monitor_upper_arms_hc.jpg",
+    img: `${assetsPrefix}/assets/images/blood_pressure_monitor_upper_arms_hc.jpg`,
     category: "healthcare",
     price: "4500",
     originalPrice: "5500",
@@ -309,7 +310,7 @@ export const Products = [
   {
     id: "19",
     name: "aneroid_sphygmomanometer_110_hc",
-    img: "/assets/images/aneroid_sphygmomanometer_hc.jpg",
+    img: `${assetsPrefix}/assets/images/aneroid_sphygmomanometer_hc.jpg`,
     category: "healthcare",
     price: "2999",
     originalPrice: "3449",
@@ -319,7 +320,7 @@ export const Products = [
   {
     id: "20",
     name: "paracetamol_med_tablet_10s_500mg_strip_m",
-    img: "/assets/images/paracetamol_med_500mg_strip_m.jpg",
+    img: `${assetsPrefix}/assets/images/paracetamol_med_500mg_strip_m.jpg`,
     category: "medicines",
     price: "89",
     originalPrice: "129",
@@ -329,7 +330,7 @@ export const Products = [
   {
     id: "21",
     name: "paracetamol_dolo_650mg_tablet_m",
-    img: "/assets/images/paracetamol_dolo_650mg_tablet_strip_m.jpg",
+    img: `${assetsPrefix}/assets/images/paracetamol_dolo_650mg_tablet_strip_m.jpg`,
     category: "medicines",
     price: "139",
     originalPrice: "169",
@@ -339,7 +340,7 @@ export const Products = [
   {
     id: "22",
     name: "oxycodone_rab_mck_hydrochloride_m",
-    img: "/assets/images/oxycodone_rab_mick_m.jpg",
+    img: `${assetsPrefix}/assets/images/oxycodone_rab_mick_m.jpg`,
     category: "medicines",
     price: "7999",
     originalPrice: "9999",
@@ -349,7 +350,7 @@ export const Products = [
   {
     id: "23",
     name: "deep_heat_heal_spray_for_pain_relief_m",
-    img: "/assets/images/deep_heat_heal_spray_for_pain_relief_m.jpg",
+    img: `${assetsPrefix}/assets/images/deep_heat_heal_spray_for_pain_relief_m.jpg`,
     category: "medicines",
     price: "249",
     originalPrice: "299",
@@ -359,7 +360,7 @@ export const Products = [
   {
     id: "24",
     name: "cotton_cripe_bandage_pati_1mtr_m",
-    img: "/assets/images/cotton_cripe_bandage_pati_1mtr_m.jpg",
+    img: `${assetsPrefix}/assets/images/cotton_cripe_bandage_pati_1mtr_m.jpg`,
     category: "medicines",
     price: "99",
     originalPrice: "125",
@@ -369,7 +370,7 @@ export const Products = [
   {
     id: "25",
     name: "cotton_cripe_bandage_12_pieces_pack_m",
-    img: "/assets/images/cotton_cripe_bandage_12_pieces_pack_m.jpg",
+    img: `${assetsPrefix}/assets/images/cotton_cripe_bandage_12_pieces_pack_m.jpg`,
     category: "medicines",
     price: "30",
     originalPrice: "49",

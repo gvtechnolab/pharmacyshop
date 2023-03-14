@@ -8,6 +8,7 @@ import { store } from "../store";
 import { Provider } from "react-redux";
 import { PersistGate } from "redux-persist/integration/react";
 import { persistStore } from "redux-persist";
+import { assetsPrefix } from "../src/utills/constants";
 
 export default function MyApp({ Component, pageProps }) {
   let persistor = persistStore(store);
@@ -17,7 +18,7 @@ export default function MyApp({ Component, pageProps }) {
         <PersistGate persistor={persistor}>
           <Head>
             <title>Create Next App</title>
-            <link rel="icon" href="/assets/images/pharmacyshoplogo96.png" />
+            <link rel="icon" href={`${assetsPrefix}/assets/images/pharmacyshoplogo96.png`} />
 
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link
