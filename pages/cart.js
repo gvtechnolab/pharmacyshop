@@ -1,14 +1,42 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { useSelector } from "react-redux";
+import Container from "@mui/material/Container";
+import PageHead from "../src/components/PageHead/PageHead";
+import PsPageHeading from "../src/components/PsPageHeading/PsPageHeading";
+import { Products } from "../src/utills/globalData";
 
 const cart = () => {
-  return (
-    <div>
-      CART page.
-      <p>
-      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos deserunt quibusdam quidem odit, voluptatibus enim suscipit fugit debitis labore repellendus molestias. Quis eveniet repellendus quisquam architecto consequuntur quos necessitatibus nostrum!
-      </p>
-    </div>
-  )
-}
+  const [cartData, setCartData] = useState([]);
 
-export default cart
+  const cartStore = useSelector((state) => state.cart);
+
+  useEffect(() => {
+    const data = Products?.filter((product) => 
+      cartStore?.map((cart) => cart?.id === product?.id)
+    );
+    console.log("data-", data);
+  }, [cartStore]);
+
+  return (
+    <>
+      <PageHead name="Cart" />
+      <Container sx={{ marginBottom: "15px" }}>
+        <PsPageHeading>
+          <h4>Cart</h4>
+          <span>{cartStore?.length} Products</span>
+        </PsPageHeading>
+      </Container>
+      <div>
+        {cartStore?.length > 0
+          ? cartStore?.map((i) => (
+              <p>
+                id:{i?.id} qty : {i?.qty}
+              </p>
+            ))
+          : "No Cart Item Found!"}
+      </div>
+    </>
+  );
+};
+
+export default cart;

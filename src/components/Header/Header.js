@@ -1,4 +1,5 @@
 import * as React from "react";
+import { useSelector } from "react-redux";
 import { styled, alpha } from "@mui/material/styles";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -59,6 +60,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function Header({ setIsLeftMenuOpen }) {
+  const cart = useSelector((state) => state.cart);
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 
@@ -138,7 +140,7 @@ export default function Header({ setIsLeftMenuOpen }) {
           color="inherit"
         >
           <PsLink href="/cart">
-            <Badge badgeContent={13} color="error">
+            <Badge badgeContent={cart?.length} color="error">
               <ShoppingCart />
             </Badge>
           </PsLink>
@@ -227,7 +229,7 @@ export default function Header({ setIsLeftMenuOpen }) {
                 aria-label="show 13 new notifications"
                 color="inherit"
               >
-                <Badge badgeContent={13} color="error">
+                <Badge badgeContent={cart?.length} color="error">
                   <ShoppingCart />
                 </Badge>
               </IconButton>

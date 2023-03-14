@@ -1,46 +1,52 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
-import Divider from "@mui/material/Divider";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import CancelIcon from "@mui/icons-material/Cancel";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import PageHead from "../src/components/PageHead/PageHead";
 import PsPageHeading from "../src/components/PsPageHeading/PsPageHeading";
 import PsBox from "../src/components/PsBox/PsBox";
-import PsUserpageItem from "../src/components/PsUserpageItem/PsUserpageItem";
+import { Products } from "../src/utills/globalData";
+import Grid from "@mui/material/Grid";
+import UserProductItem from "../src/components/UserProductItem/UserProductItem";
 
 const wishlist = () => {
+  const [wishlistData, setWishlistData] = useState([]);
+
   const wishlist = useSelector((state) => state.wishlist);
+
+  useEffect(() => {
+    let data = Products?.filter((item) => wishlist?.includes(item?.id));
+    setWishlistData(data);
+  }, [wishlist]);
+
   return (
     <>
       <PageHead name="Wishlist" />
-      <Container>
+      <Container sx={{ marginBottom: "15px" }}>
         <PsPageHeading>
           <h4>Wishlist</h4>
-          <span>0 Products</span>
+          <span>{wishlist?.length} Products</span>
         </PsPageHeading>
         <PsBox>
           <Stack spacing={3}>
-            {wishlist?.length > 0 &&
-              wishlist?.map((item, key) => (
-                <>
-                  <PsUserpageItem>
-                    <div>product {item}</div>
-                    <div>hm icon</div>
-                    <div>
-                      <Button variant="text" color="success">
-                        Move to cart
-                      </Button>
-                      <IconButton aria-label="Example">
-                        <CancelIcon />
-                      </IconButton>
-                    </div>
-                  </PsUserpageItem>
-                  <Divider color="lightgrey" />
-                </>
-              ))}
+            <Grid
+              container
+              rowSpacing={1}
+              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+            >
+              {wishlistData?.length > 0
+                ? wishlistData?.map((item, key) => (
+                    <>
+                      <Grid item xs={3} key={key}>
+                        <UserProductItem
+                          item={item}
+                          productIn="wishlist"
+                        />
+                      </Grid>
+                    </>
+                  ))
+                : "No Wishlist Item Found!"}
+            </Grid>
           </Stack>
         </PsBox>
       </Container>
