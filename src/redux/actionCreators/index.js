@@ -3,6 +3,7 @@ import {
   REMOVEFROMWISHLIST,
   CLEARWISHLIST,
   ADDTOCART,
+  DECREMENTFROMCART,
   REMOVEFROMCART,
   CLEARCART,
 } from "./actions";
@@ -36,8 +37,14 @@ export const addtocart = (item) => {
   };
 };
 
+export const decrementfromcart = (item) => {
+  return {
+    type: DECREMENTFROMCART,
+    payload: item,
+  };
+};
+
 export const removefromcart = (item) => {
-  console.log("action index", item);
   return {
     type: REMOVEFROMCART,
     payload: item,

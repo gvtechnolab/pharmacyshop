@@ -2,6 +2,7 @@ import {
   ADDTOCART,
   REMOVEFROMCART,
   CLEARCART,
+  DECREMENTFROMCART,
 } from "../actionCreators/actions";
 
 const initialState = [];
@@ -26,10 +27,12 @@ const reducer = (state = initialState, action) => {
           },
         ];
       }
+    case DECREMENTFROMCART:
+      console.log("=", action?.payload);
+      return state;
     case REMOVEFROMCART:
-      console.log("cart redu-", action.payload);
-      const one = state?.filter((item) => item?.id !== action?.payload?.id);
-      return one;
+      const data = state?.filter((item) => item?.id !== action?.payload?.id);
+      return data;
     default:
       return state;
   }

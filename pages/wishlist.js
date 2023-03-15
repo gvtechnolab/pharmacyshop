@@ -37,8 +37,8 @@ const wishlist = () => {
               {wishlistData?.length > 0
                 ? wishlistData?.map((item, key) => (
                     <>
-                      <Grid item xs={3} key={key}>
-                        <div>{item?.id}</div>
+                      <Grid item xs={4} key={key}>
+                        <UserProductItem item={item} productIn="wishlist" />
                       </Grid>
                     </>
                   ))
