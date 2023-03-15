@@ -11,6 +11,15 @@ import PsBox from "../src/components/PsBox/PsBox";
 const cart = () => {
   const cartStore = useSelector((state) => state.cart);
 
+<<<<<<< Updated upstream
+=======
+  useEffect(() => {
+    const data = Products?.filter((product) => 
+      cartStore?.map((cart) => cart?.id === product?.id)
+    );
+  }, [cartStore]);
+
+>>>>>>> Stashed changes
   return (
     <>
       <PageHead name="Cart" />

@@ -6,7 +6,10 @@ import Typography from "@mui/material/Typography";
 import { Button, CardActionArea, CardActions } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import BookmarkRemove from "@mui/icons-material/BookmarkRemoveTwoTone";
+<<<<<<< Updated upstream
 import RemoveCircle from "@mui/icons-material/RemoveCircleTwoTone";
+=======
+>>>>>>> Stashed changes
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../redux";
@@ -16,7 +19,11 @@ import { Products } from "../../utills/globalData";
 const UserProductItem = ({ item, productIn }) => {
   const [itemData, setItemData] = useState([]);
 
+<<<<<<< Updated upstream
   const cartStore = useSelector((state) => state.cart);
+=======
+  const wishlistStore = useSelector((state)=>state.wishlist)
+>>>>>>> Stashed changes
 
   const dispatch = useDispatch();
   const { removefromwishlist, addtocart, removefromcart } = bindActionCreators(
@@ -27,8 +34,13 @@ const UserProductItem = ({ item, productIn }) => {
   useEffect(() => {
     const data = Products?.filter((product) => product?.id === item?.id);
     setItemData(data);
+<<<<<<< Updated upstream
   }, [cartStore]);
   console.log("itemData=", itemData);
+=======
+  }, []);
+  console.log("data:", itemData);
+>>>>>>> Stashed changes
 
   return (
     <Card sx={{ maxWidth: 250, margin: "10px 0", position: "relative" }}>
@@ -50,6 +62,7 @@ const UserProductItem = ({ item, productIn }) => {
         </CardContent>
       </CardActionArea>
       <CardActions>
+<<<<<<< Updated upstream
         {productIn === "wishlist" ? (
           <Button
             variant="text"
@@ -76,6 +89,22 @@ const UserProductItem = ({ item, productIn }) => {
               removefromcart({ id: itemData[0]?.id });
             }
           }}
+=======
+        <Button
+          variant="text"
+          color="success"
+          onClick={() => {
+            addtocart({ id: itemData?.[0]?.id, qty: 1 });
+            removefromwishlist(itemData?.[0]?.id);
+          }}
+        >
+          Move to cart
+        </Button>
+        <IconButton
+          aria-label="Example"
+          title="Remove from wishlist"
+          onClick={() => removefromwishlist(itemData?.[0]?.id)}
+>>>>>>> Stashed changes
           sx={{
             position: "absolute",
             top: "5px",
