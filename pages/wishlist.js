@@ -27,25 +27,27 @@ const wishlist = () => {
           <h4>Wishlist</h4>
           <span>{wishlist?.length} Products</span>
         </PsPageHeading>
-        <PsBox>
-          <Stack spacing={3}>
-            <Grid
-              container
-              rowSpacing={1}
-              columnSpacing={{ xs: 1, sm: 2, md: 3 }}
-            >
-              {wishlistData?.length > 0
-                ? wishlistData?.map((item, key) => (
-                    <>
-                      <Grid item xs={4} key={key}>
-                        <UserProductItem item={item} productIn="wishlist" />
-                      </Grid>
-                    </>
-                  ))
-                : "No Wishlist Item Found!"}
-            </Grid>
-          </Stack>
-        </PsBox>
+        {wishlistData?.length > 0 ? (
+          <PsBox>
+            <Stack spacing={3}>
+              <Grid
+                container
+                rowSpacing={1}
+                columnSpacing={{ xs: 1, sm: 2, md: 3 }}
+              >
+                {wishlistData?.map((item, key) => (
+                  <>
+                    <Grid item xs={4} key={key}>
+                      <UserProductItem item={item} productIn="wishlist" />
+                    </Grid>
+                  </>
+                ))}
+              </Grid>
+            </Stack>
+          </PsBox>
+        ) : (
+          "No Wishlist Item Found!"
+        )}
       </Container>
     </>
   );

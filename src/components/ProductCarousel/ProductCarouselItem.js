@@ -38,7 +38,7 @@ const ProductCarouselItem = ({ item }) => {
       sx={{
         maxWidth: 250,
         margin: "10px 5px",
-        height: "320px",
+        // height: "320px",
         padding: "10px",
         borderRadius: "8px",
         boxShadow:
@@ -53,24 +53,19 @@ const ProductCarouselItem = ({ item }) => {
         image={item?.img}
         title="Click To View"
       />
-      <CardContent>
-        <Typography
-          gutterBottom
-          variant="span"
-          component="div"
-          sx={{ textTransform: "capitalize" }}
-        >
-          {`${item?.name?.replaceAll("_", " ").slice(0, 30)} ...`}
+      <CardContent sx={{ textTransform: "capitalize" }}>
+        <Typography gutterBottom variant="subtitle1" component="div" title={item?.name?.replaceAll("_", " ")}>
+          {`${item?.name?.replaceAll("_", " ").slice(0, 35)} ...`}
         </Typography>
         <Typography
-          variant="body3"
+          variant="string"
           color="text.secondary"
           sx={{ marginRight: "5px" }}
         >
           ₹{item?.price}
         </Typography>
         <Typography
-          variant="body2"
+          variant="body3"
           color="lightgray"
           sx={{ display: "inline-block", textDecoration: "line-through" }}
         >
@@ -78,27 +73,6 @@ const ProductCarouselItem = ({ item }) => {
         </Typography>
       </CardContent>
       <CardActions>
-        {/* <ButtonGroup size="small" aria-label="small button group">
-          <Button
-            variant="outlined"
-            size="small"
-            color="success"
-            // onClick={() => removefromcart(item?.id)}
-          >
-            -
-          </Button>
-          <Button variant="outlined" size="small" color="success">
-            {cart?.length}
-          </Button>
-          <Button
-            variant="outlined"
-            size="small"
-            color="success"
-            // onClick={() => addtocart(item?.id)}
-          >
-            +
-          </Button>
-        </ButtonGroup> */}
         <Button
           variant="outlined"
           size="small"
@@ -110,9 +84,7 @@ const ProductCarouselItem = ({ item }) => {
       </CardActions>
       <IconButton
         size="large"
-        aria-label="account of current user"
-        aria-controls="primary-search-account-menu"
-        aria-haspopup="true"
+        aria-label="wishlistbutton"
         color="inherit"
         sx={{
           position: "absolute",
