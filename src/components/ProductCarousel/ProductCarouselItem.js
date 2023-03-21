@@ -4,7 +4,6 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
 import Typography from "@mui/material/Typography";
 import styles from "./ProductCarousel.module.css";
 import IconButton from "@mui/material/IconButton";
@@ -12,14 +11,19 @@ import Bookmark from "@mui/icons-material/Bookmark";
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../redux";
+import { useRouter } from "next/router";
 
 const ProductCarouselItem = ({ item }) => {
+  const router = useRouter();
+
   const wishlist = useSelector((state) => state.wishlist);
   const cartList = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
-  const { addtowishlist, removefromwishlist, addtocart, removefromcart } =
-    bindActionCreators(actionCreators, dispatch);
+  const { addtowishlist, removefromwishlist, addtocart } = bindActionCreators(
+    actionCreators,
+    dispatch
+  );
 
   const [addWish, SetAddWish] = useState(wishlist.includes(item?.id));
 
@@ -53,26 +57,44 @@ const ProductCarouselItem = ({ item }) => {
         image={item?.img}
         title="Click To View"
       />
-      <CardContent sx={{ textTransform: "capitalize" }}>
-        <Typography gutterBottom variant="subtitle1" component="div" title={item?.name?.replaceAll("_", " ")}>
+      <CardContent
+        sx={{ textTransform: "capitalize", cursor: "pointer" }}
+        onClick={() => router.push(`/product/${item?.id}`)}
+      >
+        <Typography
+          gutterBottom
+          variant="subtitle1"
+          component="div"
+          color="text.primary"
+          title={item?.name?.replaceAll("_", " ")}
+        >
           {`${item?.name?.replaceAll("_", " ").slice(0, 35)} ...`}
         </Typography>
         <Typography
-          variant="string"
+          gutterBottom
+          variant="body2"
           color="text.secondary"
+          component="div"
+        >
+          {item?.category}
+          {item?.id}
+        </Typography>
+        <Typography
+          variant="string"
+          color="text.primary"
           sx={{ marginRight: "5px" }}
         >
           ₹{item?.price}
         </Typography>
         <Typography
-          variant="body3"
+          variant="body2"
           color="lightgray"
           sx={{ display: "inline-block", textDecoration: "line-through" }}
         >
           ₹{item?.originalPrice}
         </Typography>
       </CardContent>
-      <CardActions>
+      {/* <CardActions>
         <Button
           variant="outlined"
           size="small"
@@ -81,7 +103,7 @@ const ProductCarouselItem = ({ item }) => {
         >
           Add to cart
         </Button>
-      </CardActions>
+      </CardActions> */}
       <IconButton
         size="large"
         aria-label="wishlistbutton"

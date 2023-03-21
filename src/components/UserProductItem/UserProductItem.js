@@ -56,6 +56,7 @@ const UserProductItem = ({ item, productIn }) => {
             <Typography
               component="div"
               variant="h6"
+              color="text.primary"
               title={itemData?.[0]?.name.replaceAll("_", " ")}
             >
               {`${itemData?.[0]?.name.replaceAll("_", " ").slice(0, 25)}...`}
@@ -69,7 +70,7 @@ const UserProductItem = ({ item, productIn }) => {
             </Typography>
             <Typography
               variant="subtitle1"
-              color="text.secondary"
+              color="text.primary"
               component="div"
             >
               ₹{itemData?.[0]?.price}
@@ -103,6 +104,7 @@ const UserProductItem = ({ item, productIn }) => {
                   onClick={() =>
                     decrementfromcart({ id: itemData[0]?.id, qty: 1 })
                   }
+                  disabled={itemQty <= 0}
                 >
                   <RemoveIcon />
                 </IconButton>
