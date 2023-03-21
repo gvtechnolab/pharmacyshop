@@ -32,8 +32,7 @@ const reducer = (state = initialState, action) => {
       if (data) {
         if (data?.qty === 1) {
           return [...state?.filter((item) => item?.id !== action?.payload?.id)];
-        }
-        else {
+        } else {
           return [
             ...state?.map((item) =>
               item?.id === action?.payload?.id
