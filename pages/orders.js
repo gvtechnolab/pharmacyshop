@@ -1,8 +1,10 @@
 import React from "react";
+import PageTitle from "../src/components/PageTitle/PageTitle";
 
 const orders = () => {
   return (
-    <div>
+    <>
+    <PageTitle name="Orders" />
       ORDERS page
       <p>
         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos deserunt
@@ -10,7 +12,7 @@ const orders = () => {
         repellendus molestias. Quis eveniet repellendus quisquam architecto
         consequuntur quos necessitatibus nostrum!
       </p>
-    </div>
+    </>
   );
 };
 

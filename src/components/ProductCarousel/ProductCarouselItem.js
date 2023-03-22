@@ -5,8 +5,8 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
-import styles from "./ProductCarousel.module.css";
 import IconButton from "@mui/material/IconButton";
+import styles from "./ProductCarousel.module.css";
 import Bookmark from "@mui/icons-material/Bookmark";
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
@@ -77,12 +77,11 @@ const ProductCarouselItem = ({ item }) => {
           component="div"
         >
           {item?.category}
-          {item?.id}
         </Typography>
         <Typography
           variant="string"
           color="text.primary"
-          sx={{ marginRight: "5px" }}
+          sx={{ marginRight: "5px", fontSize: "16px" }}
         >
           ₹{item?.price}
         </Typography>
@@ -108,6 +107,7 @@ const ProductCarouselItem = ({ item }) => {
         size="large"
         aria-label="wishlistbutton"
         color="inherit"
+        title="Add to Wishlist"
         sx={{
           position: "absolute",
           right: "3px",

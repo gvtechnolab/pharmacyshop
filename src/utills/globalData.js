@@ -244,8 +244,8 @@ export const Products = [
     category: "medicines",
     price: "300",
     originalPrice: "400",
-    ratings: "",
-    reviews: "",
+    ratings: "4.2",
+    reviews: "145",
   },
   {
     id: "13",

@@ -2,12 +2,13 @@ import React, { useState, useEffect } from "react";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import { useSelector } from "react-redux";
-import PageHead from "../src/components/PageHead/PageHead";
+import PageTitle from "../src/components/PageTitle/PageTitle";
 import PsPageHeading from "../src/components/PsPageHeading/PsPageHeading";
 import PsBox from "../src/components/PsBox/PsBox";
 import { Products } from "../src/utills/globalData";
 import Grid from "@mui/material/Grid";
 import UserProductItem from "../src/components/UserProductItem/UserProductItem";
+import NotFound from "../src/components/NotFound/NotFound";
 
 const wishlist = () => {
   const [wishlistData, setWishlistData] = useState([]);
@@ -21,7 +22,7 @@ const wishlist = () => {
 
   return (
     <>
-      <PageHead name="Wishlist" />
+      <PageTitle name="Wishlist" />
       <Container sx={{ marginBottom: "15px" }}>
         <PsPageHeading>
           <h4>Wishlist</h4>
@@ -46,7 +47,7 @@ const wishlist = () => {
             </Stack>
           </PsBox>
         ) : (
-          "No Wishlist Item Found!"
+          <NotFound what="wishlist"/>
         )}
       </Container>
     </>
