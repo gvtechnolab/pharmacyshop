@@ -61,6 +61,8 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Header({ setIsLeftMenuOpen }) {
   const cart = useSelector((state) => state.cart);
+  const wishlistStore = useSelector((state) => state.wishlist);
+
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
 

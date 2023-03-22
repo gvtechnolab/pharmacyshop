@@ -3,10 +3,6 @@ import { useSelector } from "react-redux";
 import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
-import PageHead from "../src/components/PageHead/PageHead";
-import PsPageHeading from "../src/components/PsPageHeading/PsPageHeading";
-import UserProductItem from "../src/components/UserProductItem/UserProductItem";
-import PsBox from "../src/components/PsBox/PsBox";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
@@ -14,8 +10,13 @@ import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
+import PageTitle from "../src/components/PageTitle/PageTitle";
 import { Products } from "../src/utills/globalData";
+import PsPageHeading from "../src/components/PsPageHeading/PsPageHeading";
+import PsBox from "../src/components/PsBox/PsBox";
 import PsButton from "../src/components/PsButton/PsButton";
+import UserProductItem from "../src/components/UserProductItem/UserProductItem";
+import NotFound from "../src/components/NotFound/NotFound";
 
 const cart = () => {
   const cartStore = useSelector((state) => state.cart);
@@ -43,7 +44,7 @@ const cart = () => {
 
   return (
     <>
-      <PageHead name="Cart" />
+      <PageTitle name="Cart" />
       <Container sx={{ marginBottom: "15px" }}>
         <PsPageHeading>
           <h4>Cart</h4>
@@ -110,7 +111,7 @@ const cart = () => {
                           <ListItemText primary={`Total`} />
                         </ListItem>
                       </List>
-                      <PsButton>Place Order</PsButton>
+                      <PsButton sx={{ width: "100%" }}>Place Order</PsButton>
                     </CardContent>
                   </Card>
                 </Grid>
@@ -118,7 +119,7 @@ const cart = () => {
             </Stack>
           </PsBox>
         ) : (
-          "No Cart Item Found!"
+          <NotFound what="cart" />
         )}
       </Container>
     </>

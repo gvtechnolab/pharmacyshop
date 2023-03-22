@@ -10,7 +10,7 @@ import ContactSection from "../src/components/ContactSection/ContactSection";
 export default function Home() {
   return (
     <Container>
-      <Head><title>Pharmnacy Shop</title>ફ</Head>
+      <Head><title>Pharmnacy Shop</title></Head>
       <HomeCarousel />
       <CategoryCarousel />
       <ColumnBanner />

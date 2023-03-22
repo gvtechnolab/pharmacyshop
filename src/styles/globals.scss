@@ -63,3 +63,13 @@ button {
 .ProductListingFilterItem::before{
   display: none;
 }
+
+// Product Details Page
+.subImages:hover{
+  border: 2px solid #198754;
+  // filter: blur(1px);
+}
+.mainImg:hover{
+  // transition: all 1s ease-in-out;
+  // transform: scale(1.05);
+}

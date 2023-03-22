@@ -14,8 +14,12 @@ import { bindActionCreators } from "redux";
 import { actionCreators } from "../../redux";
 import { assetsPrefix } from "../../utills/constants";
 import { Products } from "../../utills/globalData";
+import { useRouter } from "next/router";
+import Styles from "./UserProductItem.module.css";
 
 const UserProductItem = ({ item, productIn }) => {
+  const router = useRouter();
+
   const [itemData, setItemData] = useState([]);
   const [itemQty, setItemQty] = useState(0);
 
@@ -37,6 +41,7 @@ const UserProductItem = ({ item, productIn }) => {
   return (
     <>
       <Card
+        className={Styles.card}
         sx={{
           width: 370,
           height: 185,
@@ -52,14 +57,22 @@ const UserProductItem = ({ item, productIn }) => {
           alt="image"
         />
         <Box sx={{ display: "flex", flexDirection: "column" }}>
-          <CardContent sx={{ flex: "1 0 auto", textTransform: "capitalize" }}>
+          <CardContent
+            sx={{
+              flex: "1 0 auto",
+              textTransform: "capitalize",
+              cursor: "pointer",
+              padding: "24px 15px 10px 15px",
+            }}
+            onClick={() => router.push(`/product/${itemData?.[0]?.id}`)}
+          >
             <Typography
               component="div"
-              variant="h6"
+              variant="subtitle1"
               color="text.primary"
               title={itemData?.[0]?.name.replaceAll("_", " ")}
             >
-              {`${itemData?.[0]?.name.replaceAll("_", " ").slice(0, 25)}...`}
+              {`${itemData?.[0]?.name.replaceAll("_", " ").slice(0, 30)}...`}
             </Typography>
             <Typography
               variant="subtitle2"
@@ -122,6 +135,7 @@ const UserProductItem = ({ item, productIn }) => {
             )}
             <IconButton
               aria-label="Example"
+              className={Styles.removeItemButton}
               title={`Remove from ${
                 productIn === "wishlist" ? "Wishlist" : "Cart"
               }`}
