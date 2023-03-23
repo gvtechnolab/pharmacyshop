@@ -398,3 +398,27 @@ export const ProductFilterOptions = [
     maxPrice: 10000,
   },
 ];
+
+export const OfferDetails = [
+  {
+    id: 1,
+    name: "Bank Offer",
+    percentage: 10,
+    type: "Credit/Debit Card",
+    bank: "SBI",
+  },
+  {
+    id: 2,
+    name: "Bank Offer",
+    percentage: 10,
+    type: "EMI",
+    bank: "SBI",
+  },
+  {
+    id: 3,
+    name: "Special Price",
+    percentage: 5,
+    type: "",
+    bank: "Coupon",
+  },
+];

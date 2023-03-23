@@ -1,20 +1,24 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Container from "@mui/material/Container";
+import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import { List, ListItem, ListItemIcon, ListItemText } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
+import LocalOffer from "@mui/icons-material/LocalOffer";
 import Bookmark from "@mui/icons-material/Bookmark";
+import Star from "@mui/icons-material/Star";
 import PageTitle from "../../src/components/PageTitle/PageTitle";
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "@reduxjs/toolkit";
 import { actionCreators } from "../../src/redux";
 import { Products } from "../../src/utills/globalData";
 import { assetsPrefix } from "../../src/utills/constants";
-import PsButton from "../../src/components/PsButton/PsButton";
+import { OfferDetails } from "../../src/utills/globalData";
 
 const Product = () => {
   const wishlist = useSelector((state) => state.wishlist);
@@ -95,70 +99,110 @@ const Product = () => {
             >
               {productData?.[0]?.name.replaceAll("_", " ")}
             </Typography>
-            <Typography variant="body1" gutterBottom>
+            <Typography variant="body2" sx={{margin:'10px 0'}}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting. It was popularised in the 1960s with the
-              release of Letraset sheets containing Lorem Ipsum passages.
+              type and scrambled it to make a type specimen book.
             </Typography>
-            <Typography variant="h5">₹{productData?.[0]?.price}</Typography>
-            <Typography
-              variant="string"
-              color="text.secondary"
-              sx={{ textDecorationLine: "line-through" }}
+            <Box
+              sx={{ display: "flex", margin: "10px 0", alignItems: "center" }}
             >
-              ₹{productData?.[0]?.originalPrice}
-            </Typography>
-            <Typography variant="subtitle2">5%</Typography>
-            <Typography variant="body1" >{productData?.[0]?.ratings}%</Typography>
-            <Typography variant="body1">{productData?.[0]?.reviews} Reviews</Typography>
-            {cartData?.qty > 0 ? (
-              <ButtonGroup
-                aria-label="small button group"
-                color="success"
-                variant="outlined"
-              >
-                <Button
-                  key="remove"
-                  onClick={() =>
-                    decrementfromcart({ id: productData?.[0]?.id, qty: 1 })
-                  }
-                >
-                  -
-                </Button>
-                <Button key="qty" onClick={(e) => e.preventDefault()}>
-                  {cartData?.qty || 0}
-                </Button>
-                <Button
-                  key="add"
-                  onClick={() =>
-                    addtocart({ id: productData?.[0]?.id, qty: 1 })
-                  }
-                >
-                  +
-                </Button>
-              </ButtonGroup>
-            ) : (
-              <Button
-                variant="outlined"
-                color="success"
-                onClick={() => {
-                  addtocart({ id: productData?.[0]?.id, qty: 1 });
+              <Typography
+                variant="caption"
+                sx={{
+                  color: "#198754",
+                  background: "#dbebe1",
+                  padding: "3px",
+                  borderRadius: "3px",
                 }}
               >
-                Add to cart
-              </Button>
-            )}
-            <PsButton
-              onClick={() => {
-                // addtocart({ id: productData?.[0]?.id, qty: 1 });
+                {productData?.[0]?.ratings}<Star sx={{fontSize:'13px', verticalAlign:'text-top'}}/>
+              </Typography>
+              <Typography sx={{ padding: "3px" }}>
+                & {productData?.[0]?.reviews} Reviews
+              </Typography>
+            </Box>
+            <Box
+              sx={{ display: "flex", margin: "10px 0", alignItems: "center" }}
+            >
+              <Typography variant="h5" sx={{ padding: "0 5px" }}>
+                ₹{productData?.[0]?.price}
+              </Typography>
+              <Typography
+                variant="string"
+                color="lightgrey"
+                sx={{ textDecorationLine: "line-through" }}
+              >
+                ₹{productData?.[0]?.originalPrice}
+              </Typography>
+              <Typography
+                variant="subtitle1"
+                sx={{ padding: "0 5px", color: "#198754", fontWeight: "bold" }}
+              >
+                5% Off
+              </Typography>
+            </Box>
+            <List>
+              {OfferDetails?.map((item) => (
+                <ListItem disablePadding>
+                  <ListItemIcon>
+                    <LocalOffer color="success" sx={{fontSize:'17px'}} />
+                  </ListItemIcon>
+                  <ListItemText><Typography variant="body2"><b>{item?.name}</b>{` ${item?.percentage}% Instant discount on ${item?.bank} ${item?.type} Transactions`}</Typography></ListItemText>
+                </ListItem>
+              ))}
+            </List>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "space-between",
+                margin: "10px 0",
+                alignItems: "center",
               }}
             >
-              Buy it now
-            </PsButton>
+              {cartData?.qty > 0 ? (
+                <ButtonGroup
+                  aria-label="small button group"
+                  color="success"
+                  variant="outlined"
+                  fullWidth
+                  sx={{ width: "50%" }}
+                >
+                  <Button
+                    key="remove"
+                    onClick={() =>
+                      decrementfromcart({ id: productData?.[0]?.id, qty: 1 })
+                    }
+                  >
+                    -
+                  </Button>
+                  <Button key="qty" disabled>
+                    {cartData?.qty || 0}
+                  </Button>
+                  <Button
+                    key="add"
+                    onClick={() =>
+                      addtocart({ id: productData?.[0]?.id, qty: 1 })
+                    }
+                  >
+                    +
+                  </Button>
+                </ButtonGroup>
+              ) : (
+                <Button
+                  variant="outlined"
+                  color="success"
+                  fullWidth
+                  sx={{ width: "50%" }}
+                  onClick={() => {
+                    addtocart({ id: productData?.[0]?.id, qty: 1 });
+                  }}
+                >
+                  Add to cart
+                </Button>
+              )}
+            </Box>
           </Grid>
         </Grid>
         <IconButton
