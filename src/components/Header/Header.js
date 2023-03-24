@@ -110,16 +110,13 @@ export default function Header({ setIsLeftMenuOpen }) {
         <MenuItem onClick={handleMenuClose}>
           Wishlist
           {wishlistStore?.length > 0 ? (
-            <Typography
-              variant="string"
-              sx={{
-                background: "#198754",
-                margin: "0 3px",
-                height: "5px",
-                width: "5px",
-                borderRadius: "50%",
-              }}
-            ></Typography>
+            <Badge
+              color="success"
+              overlap="circular"
+              badgeContent=" "
+              variant="dot"
+              sx={{marginX:'7px'}}
+            ></Badge>
           ) : (
             ""
           )}

@@ -19,6 +19,7 @@ import { actionCreators } from "../../src/redux";
 import { Products } from "../../src/utills/globalData";
 import { assetsPrefix } from "../../src/utills/constants";
 import { OfferDetails } from "../../src/utills/globalData";
+import ScrolledProductDetails from "../../src/components/ScrolledProductDetails/ScrolledProductDetails";
 
 const Product = () => {
   const wishlist = useSelector((state) => state.wishlist);
@@ -99,7 +100,7 @@ const Product = () => {
             >
               {productData?.[0]?.name.replaceAll("_", " ")}
             </Typography>
-            <Typography variant="body2" sx={{margin:'10px 0'}}>
+            <Typography variant="body2" sx={{ margin: "10px 0" }}>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text
               ever since the 1500s, when an unknown printer took a galley of
@@ -117,7 +118,8 @@ const Product = () => {
                   borderRadius: "3px",
                 }}
               >
-                {productData?.[0]?.ratings}<Star sx={{fontSize:'13px', verticalAlign:'text-top'}}/>
+                {productData?.[0]?.ratings}
+                <Star sx={{ fontSize: "13px", verticalAlign: "text-top" }} />
               </Typography>
               <Typography sx={{ padding: "3px" }}>
                 & {productData?.[0]?.reviews} Reviews
@@ -147,9 +149,14 @@ const Product = () => {
               {OfferDetails?.map((item) => (
                 <ListItem disablePadding>
                   <ListItemIcon>
-                    <LocalOffer color="success" sx={{fontSize:'17px'}} />
+                    <LocalOffer color="success" sx={{ fontSize: "17px" }} />
                   </ListItemIcon>
-                  <ListItemText><Typography variant="body2"><b>{item?.name}</b>{` ${item?.percentage}% Instant discount on ${item?.bank} ${item?.type} Transactions`}</Typography></ListItemText>
+                  <ListItemText>
+                    <Typography variant="body2">
+                      <b>{item?.name}</b>
+                      {` ${item?.percentage}% Instant discount on ${item?.bank} ${item?.type} Transactions`}
+                    </Typography>
+                  </ListItemText>
                 </ListItem>
               ))}
             </List>
@@ -224,6 +231,47 @@ const Product = () => {
           <Bookmark />
         </IconButton>
       </Container>
+      <div>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum. Why do we use it? It is a long established fact that a
+        reader will be distracted by the readable content of a page when looking
+        at its layout. The point of using Lorem Ipsum is that it has a
+        more-or-less normal distribution of letters, as opposed to using
+        'Content here, content here', making it look like readable English. Many
+        desktop publishing packages and web page editors now use Lorem Ipsum as
+        their default model text, and a search for 'lorem ipsum' will uncover
+        many web sites still in their infancy. Various versions have evolved
+        over the years, sometimes by accident, sometimes on purpose (injected
+        humour and the like).
+      </div>
+      <div>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book. It has survived not only five
+        centuries, but also the leap into electronic typesetting, remaining
+        essentially unchanged. It was popularised in the 1960s with the release
+        of Letraset sheets containing Lorem Ipsum passages, and more recently
+        with desktop publishing software like Aldus PageMaker including versions
+        of Lorem Ipsum. Why do we use it? It is a long established fact that a
+        reader will be distracted by the readable content of a page when looking
+        at its layout. The point of using Lorem Ipsum is that it has a
+        more-or-less normal distribution of letters, as opposed to using
+        'Content here, content here', making it look like readable English. Many
+        desktop publishing packages and web page editors now use Lorem Ipsum as
+        their default model text, and a search for 'lorem ipsum' will uncover
+        many web sites still in their infancy. Various versions have evolved
+        over the years, sometimes by accident, sometimes on purpose (injected
+        humour and the like).
+      </div>
+      <ScrolledProductDetails data={productData?.[0]} />
     </>
   );
 };

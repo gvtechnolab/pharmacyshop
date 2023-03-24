@@ -18,7 +18,10 @@ export default function MyApp({ Component, pageProps }) {
         <PersistGate persistor={persistor}>
           <Head>
             <title>Create Next App</title>
-            <link rel="icon" href={`${assetsPrefix}/assets/images/pharmacyshoplogo96.png`} />
+            <link
+              rel="icon"
+              href={`${assetsPrefix}/assets/images/pharmacyshoplogo96.png`}
+            />
 
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link
