@@ -2,6 +2,7 @@ import {
   ADDTOCART,
   REMOVEFROMCART,
   CLEARCART,
+  DECREMENTFROMCART,
 } from "../actionCreators/actions";
 
 const initialState = [];
@@ -26,9 +27,27 @@ const reducer = (state = initialState, action) => {
           },
         ];
       }
+    case DECREMENTFROMCART:
+      const data = state?.find((item) => item?.id === action?.payload?.id);
+      if (data) {
+        if (data?.qty === 1) {
+          return [...state?.filter((item) => item?.id !== action?.payload?.id)];
+        } else {
+          return [
+            ...state?.map((item) =>
+              item?.id === action?.payload?.id
+                ? { ...item, qty: item?.qty - action?.payload?.qty }
+                : item
+            ),
+          ];
+        }
+      }
+      return state;
     case REMOVEFROMCART:
-      const one = state?.filter((item) => item !== action?.payload);
-      return one;
+      const removedData = state?.filter(
+        (item) => item?.id !== action?.payload?.id
+      );
+      return removedData;
     default:
       return state;
   }

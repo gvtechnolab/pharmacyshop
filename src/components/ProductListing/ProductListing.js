@@ -29,15 +29,12 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const ProductListing = ({ category }) => {
   const [CategorizedData, SetCategorizedData] = useState([]);
-  const [value, setValue] = React.useState([20, 37]);
+
   useEffect(() => {
     let data = Products?.filter((item) => item?.category === category);
     SetCategorizedData(data);
   }, []);
 
-  const handlePriceChange = (event, newValue) => {
-    setValue(newValue);
-  };
   return (
     <Container sx={{ marginY: "14px" }}>
       <Grid container spacing={2}>

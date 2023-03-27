@@ -1,11 +1,11 @@
 import React from 'react'
-import PageHead from '../src/components/PageHead/PageHead.js'
+import PageTitle from '../src/components/PageTitle/PageTitle.js'
 import ProductListing from '../src/components/ProductListing/ProductListing.js'
 
 const medicines = () => {
   return (
     <>
-      <PageHead name="Medicines" />
+      <PageTitle name="Medicines" />
       <ProductListing category='medicines' />
     </>
   )

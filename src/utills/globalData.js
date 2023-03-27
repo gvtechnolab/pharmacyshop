@@ -244,8 +244,8 @@ export const Products = [
     category: "medicines",
     price: "300",
     originalPrice: "400",
-    ratings: "",
-    reviews: "",
+    ratings: "4.2",
+    reviews: "145",
   },
   {
     id: "13",
@@ -396,5 +396,29 @@ export const ProductFilterOptions = [
     options: [],
     minPrice: 50,
     maxPrice: 10000,
+  },
+];
+
+export const OfferDetails = [
+  {
+    id: 1,
+    name: "Bank Offer",
+    percentage: 10,
+    type: "Credit/Debit Card",
+    bank: "SBI",
+  },
+  {
+    id: 2,
+    name: "Bank Offer",
+    percentage: 10,
+    type: "EMI",
+    bank: "SBI",
+  },
+  {
+    id: 3,
+    name: "Special Price",
+    percentage: 5,
+    type: "",
+    bank: "Coupon",
   },
 ];

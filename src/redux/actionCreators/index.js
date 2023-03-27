@@ -3,6 +3,7 @@ import {
   REMOVEFROMWISHLIST,
   CLEARWISHLIST,
   ADDTOCART,
+  DECREMENTFROMCART,
   REMOVEFROMCART,
   CLEARCART,
 } from "./actions";
@@ -32,6 +33,13 @@ export const clearwishlist = () => {
 export const addtocart = (item) => {
   return {
     type: ADDTOCART,
+    payload: item,
+  };
+};
+
+export const decrementfromcart = (item) => {
+  return {
+    type: DECREMENTFROMCART,
     payload: item,
   };
 };

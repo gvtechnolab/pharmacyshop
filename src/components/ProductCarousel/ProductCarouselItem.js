@@ -4,22 +4,26 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
 import Typography from "@mui/material/Typography";
-import styles from "./ProductCarousel.module.css";
 import IconButton from "@mui/material/IconButton";
+import styles from "./ProductCarousel.module.css";
 import Bookmark from "@mui/icons-material/Bookmark";
 import { useSelector, useDispatch } from "react-redux";
 import { bindActionCreators } from "redux";
 import { actionCreators } from "../../redux";
+import { useRouter } from "next/router";
 
 const ProductCarouselItem = ({ item }) => {
+  const router = useRouter();
+
   const wishlist = useSelector((state) => state.wishlist);
   const cartList = useSelector((state) => state.cart);
 
   const dispatch = useDispatch();
-  const { addtowishlist, removefromwishlist, addtocart, removefromcart } =
-    bindActionCreators(actionCreators, dispatch);
+  const { addtowishlist, removefromwishlist, addtocart } = bindActionCreators(
+    actionCreators,
+    dispatch
+  );
 
   const [addWish, SetAddWish] = useState(wishlist.includes(item?.id));
 
@@ -38,7 +42,7 @@ const ProductCarouselItem = ({ item }) => {
       sx={{
         maxWidth: 250,
         margin: "10px 5px",
-        height: "320px",
+        // height: "320px",
         padding: "10px",
         borderRadius: "8px",
         boxShadow:
@@ -53,19 +57,31 @@ const ProductCarouselItem = ({ item }) => {
         image={item?.img}
         title="Click To View"
       />
-      <CardContent>
+      <CardContent
+        sx={{ textTransform: "capitalize", cursor: "pointer" }}
+        onClick={() => router.push(`/product/${item?.id}`)}
+      >
         <Typography
           gutterBottom
-          variant="span"
+          variant="subtitle1"
           component="div"
-          sx={{ textTransform: "capitalize" }}
+          color="text.primary"
+          title={item?.name?.replaceAll("_", " ")}
         >
-          {`${item?.name?.replaceAll("_", " ").slice(0, 30)} ...`}
+          {`${item?.name?.replaceAll("_", " ").slice(0, 35)} ...`}
         </Typography>
         <Typography
-          variant="body3"
+          gutterBottom
+          variant="body2"
           color="text.secondary"
-          sx={{ marginRight: "5px" }}
+          component="div"
+        >
+          {item?.category}
+        </Typography>
+        <Typography
+          variant="string"
+          color="text.primary"
+          sx={{ marginRight: "5px", fontSize: "16px" }}
         >
           ₹{item?.price}
         </Typography>
@@ -77,28 +93,7 @@ const ProductCarouselItem = ({ item }) => {
           ₹{item?.originalPrice}
         </Typography>
       </CardContent>
-      <CardActions>
-        {/* <ButtonGroup size="small" aria-label="small button group">
-          <Button
-            variant="outlined"
-            size="small"
-            color="success"
-            // onClick={() => removefromcart(item?.id)}
-          >
-            -
-          </Button>
-          <Button variant="outlined" size="small" color="success">
-            {cart?.length}
-          </Button>
-          <Button
-            variant="outlined"
-            size="small"
-            color="success"
-            // onClick={() => addtocart(item?.id)}
-          >
-            +
-          </Button>
-        </ButtonGroup> */}
+      {/* <CardActions>
         <Button
           variant="outlined"
           size="small"
@@ -107,13 +102,12 @@ const ProductCarouselItem = ({ item }) => {
         >
           Add to cart
         </Button>
-      </CardActions>
+      </CardActions> */}
       <IconButton
         size="large"
-        aria-label="account of current user"
-        aria-controls="primary-search-account-menu"
-        aria-haspopup="true"
+        aria-label="wishlistbutton"
         color="inherit"
+        title="Add to Wishlist"
         sx={{
           position: "absolute",
           right: "3px",
