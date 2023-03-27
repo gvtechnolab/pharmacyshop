@@ -3,8 +3,8 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
 import { assetsPrefix } from "../../utills/constants";
+import PsButton from "../PsButton/PsButton";
 
 const Item = styled(Paper)(({ theme }) => ({
   // backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -41,9 +41,7 @@ export default function ContactSection() {
         <Item>
           <InnerItem>You're Always Welcome To</InnerItem>
           <InnerItem>
-            <Button variant="contained" color="success">
-              Contact us
-            </Button>
+            <PsButton>Contact us</PsButton>
           </InnerItem>
         </Item>
       </Stack>
