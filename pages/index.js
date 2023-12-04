@@ -6,11 +6,12 @@ import CategoryCarousel from "../src/components/CategoryCarousel/CategoryCarouse
 import ColumnBanner from "../src/components/ColumnBanner/ColumnBanner";
 import ProductCarousel from '../src/components/ProductCarousel/ProductCarousel'
 import ContactSection from "../src/components/ContactSection/ContactSection";
+import PageTitle from "../src/components/PageTitle/PageTitle";
 
 export default function Home() {
   return (
     <Container>
-      <Head><title>Pharmnacy Shop</title></Head>
+      <PageTitle title="Pharmnacy Shop" />
       <HomeCarousel />
       <CategoryCarousel />
       <ColumnBanner />
